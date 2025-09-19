@@ -1,0 +1,17 @@
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee"
+         version="5.0">
+    <servlet>
+        <servlet-name>KtorServlet</servlet-name>
+        <servlet-class>io.ktor.server.servlet.jakarta.ServletApplicationEngine</servlet-class>
+        <init-param>
+            <param-name>io.ktor.ktor.config</param-name>
+            <param-value>application.yaml</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KtorServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
